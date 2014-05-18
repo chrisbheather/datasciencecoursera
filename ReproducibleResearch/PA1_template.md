@@ -78,18 +78,6 @@ Creating a new dataset with missing values filled in with mean number of steps f
 
 ```r
 library("zoo")
-```
-
-```
-## 
-## Attaching package: 'zoo'
-## 
-## The following objects are masked from 'package:base':
-## 
-##     as.Date, as.Date.numeric
-```
-
-```r
 activity$stepsNA <- na.aggregate(activity$steps, by = activity$interval, FUN = mean)
 ```
 
